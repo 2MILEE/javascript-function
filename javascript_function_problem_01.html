@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+   var A = [90,80,50,40,10];
+   var B = [90,30,100,50,50];
+   var C = [20,30,60,50,20];
+
+
+   function avg(e){
+
+      var total = 0;         
+   if(e==1){for(var i=0; i<5; i++){total += A[i]}};
+   if(e==2){for(var i=0; i<5; i++){total += B[i]}};
+   if(e==3){for(var i=0; i<5; i++){total += C[i]}};
+
+   var avg = total/5;
+
+   return avg;
+
+   }
+
+   
+   function max(k){
+   var max=0;
+   if(k==1){for(var i=0; i<5; i++){if(max<=A[i])max=A[i]}};
+   if(k==2){for(var i=0; i<5; i++){if(max<=B[i])max=B[i]}};
+   if(k==3){for(var i=0; i<5; i++){if(max<=C[i])max=C[i]}};
+
+    return max;
+   }
+   
+
+   function min(j){
+   var min=100;
+   if(j==1){for(var i=0; i<5; i++){if(min>=A[i])min=A[i]}};
+   if(j==2){for(var i=0; i<5; i++){if(min>=B[i])min=B[i]}};
+   if(j==3){for(var i=0; i<5; i++){if(min>=C[i])min=C[i]}};
+
+
+   return min;
+   }
+   
+  
+   
+   for(var s=1;s<4;s++){
+   var str = ' 학생의 평균 점수는 ' + avg(s) + ' , 최고 점수는 '+ max(s)+' , 최하 점수는 ' + min(s) + ' 입니다.';
+   if(s==1)  console.log('A'+ str);
+   if(s==2)  console.log('B'+ str);
+   if(s==3)  console.log('C'+ str);
+   };
+
+    </script>
+</head>
+<body>
+</body>
+</html>
